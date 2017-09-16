@@ -1,0 +1,19 @@
+import sys
+
+def alternatingCharacters(s):
+    count=0
+    current=""
+    for i in range(len(s)):
+        if(i==0):
+            current=s[i]
+        elif(current==s[i]):
+            count=count+1
+        else:
+            current=s[i]
+    return count
+
+q = int(input().strip())
+for a0 in range(q):
+    s = input().strip()
+    result = alternatingCharacters(s)
+    print(result)
